@@ -1,0 +1,309 @@
+#main {
+  display: flex;
+  width: 60rem;
+  gap: 3rem;
+  height: 30rem;
+}
+
+#text {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem 2rem 2rem;
+
+  box-sizing: border-box;
+}
+#button {
+  display: flex;
+  column-gap: 1rem;
+}
+.counter {
+  display: flex;
+  width: 8rem;
+  height: 2.5rem;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}
+.btn {
+  border-style: none;
+  background-color: transparent;
+  color: hsl(26, 100%, 55%);
+
+  font-size: 20px;
+  cursor: pointer;
+}
+#Add {
+  background-color: hsl(26, 100%, 55%);
+  border-style: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 15rem;
+  height: 2.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+#price {
+  display: flex;
+  gap: 1rem;
+}
+#pr {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#pri {
+  display: flex;
+  height: 5rem;
+  flex-direction: column;
+}
+#discount {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  width: 3rem;
+  height: 1.5rem;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 15px;
+  align-items: center;
+}
+#car {
+  height: 1rem;
+  width: 1rem;
+}
+h1 {
+  width: 18rem;
+}
+#company {
+  color: hsl(219, 9%, 45%);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#del {
+  color: hsl(219, 9%, 45%);
+  font-weight: bold;
+}
+p {
+  color: hsl(219, 9%, 45%);
+}
+#next,
+#prev {
+  display: none;
+}
+.slider-image {
+  display: none;
+}
+#select {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  background-color: rgba(10, 10, 10, 0.818);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#image {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  gap: 1rem;
+}
+.sneak {
+  height: 24rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 23rem;
+  cursor: pointer;
+}
+#images {
+  display: flex;
+  width: 22.2rem;
+}
+.images {
+  display: flex;
+  width: 100%;
+}
+.images > li {
+  height: 5rem;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.images > li:first-child {
+  margin-left: -2.4rem;
+}
+.images > li > img {
+  width: 5rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+.selected {
+  opacity: 0.5;
+  border: 3px solid hsl(26, 100%, 55%);
+}
+#nextb {
+  display: block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  top: 15rem;
+  width: 2.5rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  left: 57rem;
+  border-style: none;
+  cursor: pointer;
+}
+
+#prevb {
+  display: block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  top: 15rem;
+  width: 2.5rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  left: 35rem;
+  border-style: none;
+  cursor: pointer;
+}
+#close {
+  margin-left: 22rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 376px) {
+  #main {
+    flex-direction: column;
+    width: 100%;
+    height: 50rem;
+    gap:unset;
+  }
+  #image {
+    width: 100%;
+    height: 37%;
+    position: relative;
+  }
+  #text {
+    width: 100%;
+    height: 63%;
+    padding-top: 1rem;
+  }
+  #button {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .counter {
+    width: 100%;
+  }
+  #Add {
+    width: 100%;
+  }
+  p {
+    width: 100%;
+    font-size: 15px;
+  }
+  #pri {
+    flex-direction: row;
+height: 3rem;
+    width: 100%;
+
+    gap: 4rem;
+  }
+  #images {
+    display: none;
+  }
+
+  #next {
+    display: block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    top: 10rem;
+    width: 2.5rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 18rem;
+    border-style: none;
+  }
+  #prev {
+    display: block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    top: 10rem;
+    width: 2.5rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 2rem;
+    border-style: none;
+  }
+  #ne {
+    height: 1rem;
+  }
+  .sneak {
+    display: none;
+  }
+  .slider-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #company{
+    font-size: 12px;
+  }
+}

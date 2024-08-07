@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("assets/fonts/Kumbh_Sans/static/KumbhSans-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("assets/fonts/Kumbh_Sans/static/KumbhSans-Bold.ttf");
+  font-weight: bold;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Kumbh Sans";
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+@media only screen and (max-width: 376px) {
+  body,
+  html {
+    height: auto;
+  }
+  #root {
+    gap: unset;
+    height: auto;
+    position: relative;
+  }
+}
