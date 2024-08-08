@@ -214,7 +214,7 @@ p {
   margin-left: 22rem;
   cursor: pointer;
 }
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) and (min-width:375px) {
   #main {
     flex-direction: column;
     width: 100%;
