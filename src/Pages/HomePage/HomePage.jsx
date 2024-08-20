@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-key */
 import { Link, Outlet } from "react-router-dom";
 import "./HomePage.css";
 import cart from "../../assets/images/icon-cart.svg";
 import person from "../../assets/images/image-avatar.png";
 import menu from "../../assets/images/icon-menu.svg";
 import { useState } from "react";
-import close from "../../assets/images/icon-close.svg"
+import close from "../../assets/images/icon-close.svg";
 
 
 const HomePage = () => {
@@ -27,16 +28,17 @@ const HomePage = () => {
   };
   function showmenuItems() {
     setMenuItems(true);
-    console.log(menuitems)
+    console.log(menuitems);
   }
-  function closeMenu(){
+  function closeMenu() {
     setMenuItems(false);
   }
+  
   return (
     <>
       <div id="collections">
         <nav>
-        <img src={menu} id="menu" onClick={showmenuItems} />
+          <img src={menu} id="menu" onClick={showmenuItems} />
 
           <div id="header">
             <h1>Sneakers</h1>
@@ -51,23 +53,29 @@ const HomePage = () => {
                 className={selectedItem === "item2" ? "selecteditem" : ""}
                 onClick={() => handleClick("item2")}
               >
-                <Link to="/Men">Men</Link>
+                <Link to="/">AllProducts</Link>
               </li>
               <li
                 className={selectedItem === "item3" ? "selecteditem" : ""}
                 onClick={() => handleClick("item3")}
               >
-                <Link to="/Women">Women</Link>
+                <Link to="/Men">Men</Link>
               </li>
               <li
                 className={selectedItem === "item4" ? "selecteditem" : ""}
                 onClick={() => handleClick("item4")}
               >
-                <Link to="/About">About</Link>
+                <Link to="/Women">Women</Link>
               </li>
               <li
                 className={selectedItem === "item5" ? "selecteditem" : ""}
                 onClick={() => handleClick("item5")}
+              >
+                <Link to="/About">About</Link>
+              </li>
+              <li
+                className={selectedItem === "item6" ? "selecteditem" : ""}
+                onClick={() => handleClick("item6")}
               >
                 <Link to="/Contact">Contact</Link>
               </li>
@@ -94,17 +102,19 @@ const HomePage = () => {
           </div>
         </nav>
         <hr />
-        
       </div>
 
       <Outlet></Outlet>
-      
+
       {menuitems == true ? (
         <div id="menuitems">
           <img src={close} id="closemenu" onClick={closeMenu} />
           <ul className="item">
             <li>
               <Link to="/Collections">Collections</Link>
+            </li>
+            <li>
+              <Link to="/">AllProducts</Link>
             </li>
             <li>
               <Link to="/Men">Men</Link>
@@ -118,9 +128,12 @@ const HomePage = () => {
             <li>
               <Link to="/Contact">Contact</Link>
             </li>
+           
           </ul>
         </div>
-      ):null}
+      ) : null}
+      
+      
     </>
   );
 };
