@@ -1,0 +1,23 @@
+#women{
+display: grid;
+grid-template-columns: repeat(3,20rem);
+grid-template-rows: repeat(2,30rem);
+padding: 1rem;
+gap:2rem;
+box-sizing: border-box;
+}
+.image{
+    width: 20rem;
+    height: 17rem;
+}
+@media only screen and (min-width:344px) and (max-width:600px){
+    #women{
+        grid-template-columns: repeat(1,20rem);
+    }
+    
+}
+@media only screen and (min-width:712px) and (max-width:801px) {
+    #women{
+        grid-template-columns: repeat(1,22rem);
+    }
+}

@@ -1,0 +1,47 @@
+#name,#email,#message{
+    dispay:flex;
+    width:30rem;
+}
+form{
+    width:35rem;
+    dispay:flex;
+    flex-direction:column;
+    height:30rem;
+  
+}
+#contactPage h1{
+    color:hsl(26, 100%, 55%)
+}
+input{
+    border-radius:5px;
+    height:3rem;
+    width:20rem
+}
+#contactPage{
+    dispay:flex;
+    padding-bottom:4rem;
+    box-sizing:border-box;
+    flex-direction:column
+}
+#submit{
+    width:8rem;
+    background-color:hsl(26, 100%, 55%);
+    color:white;
+    border-style:none;
+    cursor:pointer;
+}
+textarea{
+    border-radius:5px;
+    height:5rem;
+    width:24rem
+}
+@media only screen and (min-width:344px) and (max-width:600px){
+    #contactPage{
+        padding-left:2rem;
+        box-sizing:border-box;
+       
+    }
+    #name,#email,#message{width:20rem;
+   }
+   form{width:24rem;}
+}

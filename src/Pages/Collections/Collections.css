@@ -14,7 +14,7 @@
 
   box-sizing: border-box;
 }
-#button {
+.button {
   display: flex;
   column-gap: 1rem;
 }
@@ -40,7 +40,7 @@
   font-size: 20px;
   cursor: pointer;
 }
-#Add {
+.Add {
   background-color: hsl(26, 100%, 55%);
   border-style: none;
   border-radius: 10px;
@@ -55,6 +55,7 @@
   justify-content: center;
   gap: 0.5rem;
   font-weight: bold;
+  cursor:pointer;
 }
 #price {
   display: flex;
@@ -84,7 +85,7 @@
   font-size: 15px;
   align-items: center;
 }
-#car {
+.car {
   height: 1rem;
   width: 1rem;
 }
@@ -212,9 +213,104 @@ p {
 }
 #close {
   margin-left: 22rem;
-  cursor: pointer;
+ 
 }
 @media only screen and (max-width: 600px) and (min-width:344px) {
+  #main {
+    flex-direction: column;
+    width: 100%;
+    height: 50rem;
+    gap:unset;
+  }
+  #image {
+    width: 100%;
+    height: 37%;
+    position: relative;
+  }
+  #text {
+    width: 100%;
+    height: 63%;
+    padding-top: 1rem;
+  }
+  #button {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .counter {
+    width: 100%;
+  }
+  #Add {
+    width: 100%;
+  }
+  p {
+    width: 100%;
+    font-size: 15px;
+  }
+  #pri {
+    flex-direction: row;
+height: 3rem;
+    width: 100%;
+
+    gap: 4rem;
+  }
+  #images {
+    display: none;
+  }
+
+  #next {
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    top: 8rem;
+    width: 2.5rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 19rem;
+    border-style: none;
+  }
+  #prev {
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    top: 8rem;
+    width: 2.5rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 1rem;
+    border-style: none;
+  }
+  #ne {
+    height: 1rem;
+  }
+  .sneak {
+    display: none;
+  }
+  .slider-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #company{
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width:712px) and (max-width:801px) {
   #main {
     flex-direction: column;
     width: 100%;
@@ -271,8 +367,9 @@ height: 3rem;
     justify-content: center;
     align-items: center;
     display: flex;
-    left: 19rem;
+    left: 38rem;
     border-style: none;
+    cursor: pointer;
   }
   #prev {
     display: block;
@@ -291,6 +388,7 @@ height: 3rem;
     display: flex;
     left: 1rem;
     border-style: none;
+    cursor: pointer;
   }
   #ne {
     height: 1rem;

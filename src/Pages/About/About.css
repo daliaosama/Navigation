@@ -1,0 +1,39 @@
+#About{
+    display:flex;
+    flex-direction:column;
+    padding:2rem;
+    align-items:center;
+}
+span{
+    color:hsl(26, 100%, 55%);
+    font-size:1.2rem
+}
+#About h2{
+    color:hsl(26, 100%, 55%)
+}
+#About p{
+    font-size: 16px;
+    width:30rem
+}
+.aboutus,.mission,.story,.contact{
+    display:flex;
+    gap:4rem
+}
+.chooseus{
+    display:flex;
+    gap:4rem
+}
+.chooseus ul{
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    
+}
+@media only screen and (min-width:344px) and (max-width:600px){
+    .aboutus,.mission,.story,.contact{flex-direction:column;
+    gap:1rem}
+    #About p{width:20rem}
+    .chooseus ul{height:15rem
+}
+
+

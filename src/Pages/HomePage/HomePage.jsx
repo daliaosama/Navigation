@@ -6,9 +6,12 @@ import person from "../../assets/images/image-avatar.png";
 import menu from "../../assets/images/icon-menu.svg";
 import { useState } from "react";
 import close from "../../assets/images/icon-close.svg";
-
+import { useContext } from "react";
+import { CartContext } from "../../App";
 
 const HomePage = () => {
+  const { Cart } = useContext(CartContext);
+
   const [cartitem, setCartItem] = useState(false);
   const [borderColor, setBorderColor] = useState("transparent");
   const [selectedItem, setSelectedItem] = useState(null);
@@ -33,7 +36,7 @@ const HomePage = () => {
   function closeMenu() {
     setMenuItems(false);
   }
-  
+
   return (
     <>
       <div id="collections">
@@ -47,13 +50,13 @@ const HomePage = () => {
                 className={selectedItem === "item1" ? "selecteditem" : ""}
                 onClick={() => handleClick("item1")}
               >
-                <Link to="/Collections">Collections</Link>
+                <Link to="/">Collections</Link>
               </li>
               <li
                 className={selectedItem === "item2" ? "selecteditem" : ""}
                 onClick={() => handleClick("item2")}
               >
-                <Link to="/">AllProducts</Link>
+                <Link to="/AllProducts">AllProducts</Link>
               </li>
               <li
                 className={selectedItem === "item3" ? "selecteditem" : ""}
@@ -95,7 +98,12 @@ const HomePage = () => {
                 <h3>Cart</h3>
                 <hr id="hr" />
                 <div id="items">
-                  <p>Your cart is empty</p>
+                  {Cart.map((item) => (
+                    <div key={item.id} id="ite">
+                      <img src={item.thumbnail} className="cartimg" />
+                      <label className="label">{item.title} </label>
+                    </div>
+                  ))}
                 </div>
               </div>
             ) : null}
@@ -111,10 +119,10 @@ const HomePage = () => {
           <img src={close} id="closemenu" onClick={closeMenu} />
           <ul className="item">
             <li>
-              <Link to="/Collections">Collections</Link>
+              <Link to="/">Collections</Link>
             </li>
             <li>
-              <Link to="/">AllProducts</Link>
+              <Link to="/AllProducts">AllProducts</Link>
             </li>
             <li>
               <Link to="/Men">Men</Link>
@@ -128,12 +136,9 @@ const HomePage = () => {
             <li>
               <Link to="/Contact">Contact</Link>
             </li>
-           
           </ul>
         </div>
       ) : null}
-      
-      
     </>
   );
 };

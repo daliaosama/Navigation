@@ -8,6 +8,8 @@ import next from "../../assets/images/icon-next.svg";
 import prev from "../../assets/images/icon-previous.svg";
 import close from "../../assets/images/icon-close.svg";
 import { useState } from "react";
+import{ useContext } from 'react'
+import { CartContext } from "../../App";
 import "./Collections.css";
 const Collections = () => {
   const [counter, setCounter] = useState(0);
@@ -48,6 +50,15 @@ const Collections = () => {
   function closeImages() {
     setShow(false);
   }
+  const product={
+    title:'Fall Limited Edition Sneakers',
+    price:'$125.00',
+    thumbnail:sneaker
+  }
+  function AddtoCart(){
+    addToCart(product)
+  }
+  const { addToCart}=useContext(CartContext)
   return (
     <>
       <div id="main">
@@ -77,7 +88,7 @@ const Collections = () => {
         </div>
         <div id="text">
           <label id="company"> Sneaker Company</label>
-          <h1>Fall Limited Edition Sneakers</h1>
+          <h1>{product.title}</h1>
           <p>
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
@@ -85,7 +96,7 @@ const Collections = () => {
           </p>
           <div id="pri">
             <div id="price">
-              <label id="pr">$125.00</label>
+              <label id="pr">{product.price}</label>
               <div id="discount">50%</div>
             </div>
             <label id="del">
@@ -93,7 +104,7 @@ const Collections = () => {
             </label>
           </div>
 
-          <div id="button">
+          <div className="button">
             <div className="counter">
               <button className="btn" onClick={Decrement}>
                 -
@@ -103,8 +114,8 @@ const Collections = () => {
                 +
               </button>
             </div>
-            <button id="Add">
-              <img src={cart} id="car" /> Add to cart
+            <button className="Add" onClick={ AddtoCart}>
+              <img src={cart} className="car" /> Add to cart
             </button>
           </div>
         </div>
